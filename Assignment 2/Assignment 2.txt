@@ -1,0 +1,64 @@
+/ Osman Ali
+
+
+ORG 100
+INPUT
+STORE a
+OUTPUT
+INPUT
+STORE b
+OUTPUT
+INPUT
+STORE c
+OUTPUT
+
+Checking, Load a
+Subt Zero
+Skipcond 800
+Jump Neg 
+Subt Zero
+Skipcond 800
+Jump Neg
+Load c
+Subt Zero
+Skipcond 800
+Jump Neg
+Loop0, Load a
+Add Sum1
+Store Sum1
+Load Count
+Subt One
+Store Count
+Skipcond 800
+Jump Count2
+Jump Loop0
+
+Count2, Load c
+Store Count
+
+Loop1, Load Sum1
+Add Sum2
+Store Sum2
+Load Count
+Subt One
+Store Count
+Skipcond 800
+Jump End
+Jump Loop1
+
+Neg, Load Zero
+Output
+Halt
+
+End, Load Sum2
+Output
+Halt
+
+a, Dec 0
+b, Dec 0
+c, Dec 0
+Sum1, Dec 0
+Sum2, Dec 0
+Count, Dec 0
+One, Dec 1
+Zero, Dec 0

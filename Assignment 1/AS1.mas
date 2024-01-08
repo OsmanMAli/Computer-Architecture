@@ -1,0 +1,48 @@
+/ Osman Ali
+
+
+ORG 100
+INPUT
+STORE a
+OUTPUT
+INPUT
+STORE b
+OUTPUT
+INPUT
+STORE c
+OUTPUT
+
+
+Loop0, LOAD final
+	ADD a
+	STORE final
+	Load b
+	SUBT decrease
+	STORE b
+	SKIPCOND 400
+	JUMP Loop0
+
+
+Loop1, LOAD z
+	ADD final
+	STORE z
+	LOAD c
+	SUBT decrease
+	STORE c
+	SKIPCOND 400
+	JUMP Loop1
+
+
+LOAD z
+OUTPUT
+
+
+HALT
+a, DEC 0
+b, DEC 0
+c, DEC 0
+z, DEC 0
+
+
+decrease, DEC 1
+final, DEC 0
